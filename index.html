@@ -1,103 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>Accueil</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <ul class="menu">
-            <li class="menu_li">
-                <a class="menu_li_lien" href="#">Répartion des tâches</a>
-            </li>
-            <li class="menu_li">
-                <a class="menu_li_lien" href="#">Chronologie</a>
-
-            </li>
-            <li class="menu_li">
-                <a class="menu_li_lien" href="#">Problème rencontré</a>
-            </li>
-        </ul>
+      <ul class="menu">
+        <li class="menu_li">
+          <a class="menu_li_lien" href="/index.html">Acceuil</a>
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="/pages/auteurs.html">Auteurs</a>
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="/pages/tâches.html"
+            >Répartion des tâches</a
+          >
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="/pages/chronologie.html">Chronologie</a>
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="/pages/problemes.html"
+            >Problèmes rencontrés</a
+          >
+        </li>
+      </ul>
     </header>
 
     <section class="title">
-        <h1 class="title_text">Le jeu de la vie</h1>
+      <h1 class="title_text">Le jeu de la vie</h1>
     </section>
+    <blockquote class="intro">
+      "Bienvenue sur notre site dédié au célèbre JEU DE LA VIE de John Horton
+      Conway ! <br />
+      Ce jeu mathématique fascinant est bien plus qu’un simple passe-temps.
+      Découvrez comment des règles simples peuvent donner naissance à des motifs
+      complexes et à des systèmes dynamiques captivants. Ce système simple mais
+      puissant est une véritable démonstration des merveilles de
+      l’automatisation et de la théorie des systèmes complexes. Que vous soyez
+      un curieux débutant ou un expert en mathématiques, ce site est conçu pour
+      vous faire plonger dans cet univers unique et enrichissant."
+    </blockquote>
 
     <section class="descripion">
-        <ul class="descripion_list">
-            <li>
-                <h2 class="descripion_list_title">Le jeu de la vie</h2>
-            </li>
+      <ul class="descripion_list">
+        <li>
+          <h2 class="descripion_list_title">Le jeu de la vie</h2>
+        </li>
 
-            <li>
-                <p class="descripion_list_text"> &nbsp &nbsp &nbsp Le Jeu de la Vie (ou Game of Life) est un
-                    automate
-                    cellulaire
-                    inventé
-                    par le mathématicien
-                    britannique John Horton Conway en 1970. Ce n'est pas un jeu à proprement parler, mais plutôt une
-                    simulation mathématique simple qui illustre des principes complexes d'émergence et de dynamique
-                    des
-                    systèmes.
-                </p>
-                <p class="descripion_list_text"> &nbsp &nbsp &nbsp Ce jeu repose sur une grille où chaque cellule
-                    peut
-                    être
-                    vivante
-                    ou
-                    morte. À chaque génération,
-                    l’état des cellules change en fonction de règles précises qui régissent leur "naissance", leur
-                    "survie" ou leur "mort". Ces règles permettent d’observer des phénomènes étonnants, allant de
-                    motifs
-                    stables qui semblent immuables à des configurations chaotiques qui évoluent sans fin.</p>
-            </li>
-
-        </ul>
-        <div class="game-gif_wrapper">
-            <img class="game-gif" src="/img/Gospers_glider_gun.gif" alt="game image">
-        </div>
+        <li>
+          <p class="descripion_list_text">
+            &nbsp &nbsp &nbsp Le Jeu de la Vie (ou Game of Life) est un automate
+            cellulaire inventé par le mathématicien britannique John Horton
+            Conway en 1970. Ce n'est pas un jeu à proprement parler, mais plutôt
+            une simulation mathématique simple qui illustre des principes
+            complexes d'émergence et de dynamique des systèmes.
+          </p>
+          <p class="descripion_list_text">
+            &nbsp &nbsp &nbsp Ce jeu repose sur une grille où chaque cellule
+            peut être vivante ou morte. À chaque génération, l’état des cellules
+            change en fonction de règles précises qui régissent leur
+            "naissance", leur "survie" ou leur "mort". Ces règles permettent
+            d’observer des phénomènes étonnants, allant de motifs stables qui
+            semblent immuables à des configurations chaotiques qui évoluent sans
+            fin.
+          </p>
+        </li>
+      </ul>
+      <div class="game-gif_wrapper">
+        <img
+          class="game-gif"
+          src="/img/Gospers_glider_gun.gif"
+          alt="game image"
+        />
+      </div>
     </section>
     <section class="rules">
-        <div class="game-gif_wrapper">
-            <img class="game-gif" src="/img/Animated_Hwss.gif" alt="game image">
-        </div>
-        <ul class="rules_list descripion_list">
-            <li>
-                <h2 class="descripion_list_title">Le Fonctionnement</h2>
-            </li>
-            <li>
-                <p class="descripion_list_text">&nbsp &nbsp &nbsp Imaginez une grille infinie. Chaque cellule de
-                    cette
-                    grille est entourée de
-                    huit voisines. Une
-                    cellule vivante peut continuer à exister si elle est entourée par deux ou trois voisines
-                    vivantes, mais elle disparaît si elle est isolée ou au contraire, si elle est trop entourée. Les
-                    cellules mortes, elles, peuvent "renaître" si elles sont précisément entourées de trois voisines
-                    vivantes. Ces règles, bien que très simples, donnent lieu à des dynamiques imprévisibles.</p>
-                <p class="descripion_list_text">&nbsp &nbsp &nbsp Au fil des générations, on voit apparaître des
-                    motifs
-                    qui semblent se
-                    stabiliser, des structures
-                    qui bougent ou se répètent, et parfois des configurations qui se désintègrent complètement. Par
-                    exemple, certains modèles célèbres comme le "Glider" se déplacent à travers la grille, tandis
-                    que d’autres, comme les "oscillateurs", alternent entre plusieurs états.</p>
-            </li>
-        </ul>
-
+      <div class="game-gif_wrapper">
+        <img class="game-gif" src="/img/Animated_Hwss.gif" alt="game image" />
+      </div>
+      <ul class="rules_list descripion_list">
+        <li>
+          <h2 class="descripion_list_title">Le Fonctionnement</h2>
+        </li>
+        <li>
+          <p class="descripion_list_text">
+            &nbsp &nbsp &nbsp Imaginez une grille infinie. Chaque cellule de
+            cette grille est entourée de huit voisines. Une cellule vivante peut
+            continuer à exister si elle est entourée par deux ou trois voisines
+            vivantes, mais elle disparaît si elle est isolée ou au contraire, si
+            elle est trop entourée. Les cellules mortes, elles, peuvent
+            "renaître" si elles sont précisément entourées de trois voisines
+            vivantes. Ces règles, bien que très simples, donnent lieu à des
+            dynamiques imprévisibles.
+          </p>
+          <p class="descripion_list_text">
+            &nbsp &nbsp &nbsp Au fil des générations, on voit apparaître des
+            motifs qui semblent se stabiliser, des structures qui bougent ou se
+            répètent, et parfois des configurations qui se désintègrent
+            complètement. Par exemple, certains modèles célèbres comme le
+            "Glider" se déplacent à travers la grille, tandis que d’autres,
+            comme les "oscillateurs", alternent entre plusieurs états.
+          </p>
+        </li>
+      </ul>
     </section>
 
-
-
-
+    <section class="application">
+      <ul class="application_list descripion_list">
+        <li>
+          <h2 class="descripion_list_title">Applications et curiosités</h2>
+        </li>
+        <li>
+          <p class="descripion_list_text">
+            Le Jeu de la vie ne se limite pas à la théorie. Ses applications
+            s'étendent aux domaines de la biologie, de l’informatique, et même
+            de l’art ! Voici quelques exemples fascinants :
+          </p>
+        </li>
+      </ul>
+    </section>
 
     <footer class="footer"></footer>
-
-</body>
-
+  </body>
 </html>
