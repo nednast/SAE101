@@ -87,6 +87,10 @@ header {
   border-radius: 20px;
 }
 
+.active {
+  color: #9e9e9e;
+}
+
 /* ///////////////////////////////////////////////////////// */
 
 /* Ancre en haut de la page */
