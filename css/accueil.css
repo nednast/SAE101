@@ -1,0 +1,141 @@
+/* Section Intro */
+.intro {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  font-size: 23px;
+  font-family: "Kalam", serif;
+  font-weight: 400;
+  font-style: italic;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.373);
+  padding: 20px;
+  background-color: #dcdee7c7;
+}
+/* ///////////////////////////////////////////////////////////////////////// */
+/* Сommun pour les sections */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.list {
+  list-style: none;
+  width: 40%;
+  text-wrap: wrap;
+  text-align: justify;
+}
+
+.list_title {
+  font-size: 30px;
+  padding-left: 10px;
+  text-transform: uppercase;
+  color: white;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.835171568627451) 14%,
+    rgba(62, 62, 62, 1) 28%,
+    rgba(115, 115, 115, 1) 37%,
+    rgba(170, 166, 166, 1) 59%,
+    rgba(222, 224, 233, 1) 85%
+  );
+}
+
+.list_text {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+/* Section description */
+.description {
+  margin-top: 40px;
+}
+/* /////////////////////////////////////////////// */
+
+/* Styles pour les GIF */
+.game-gif {
+  height: 200px;
+  width: 300px;
+}
+
+.game-gif_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  height: 225px;
+  width: 325px;
+  border-radius: 5Opx;
+  border-radius: 10px;
+}
+/* /////////////////////////////////////////////////////// */
+
+/* Section rules */
+.rules {
+  margin-top: 50px;
+}
+/* /////////////////////////////////////////////////////// */
+
+/* Section Application */
+.application {
+  margin-top: 60px;
+  flex-direction: column;
+}
+
+.application_list {
+  width: 80%;
+}
+.application_list_text {
+  font-size: 22px;
+}
+
+.application_exemples_list {
+  list-style: none;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 50px;
+}
+.application_exemples_li {
+  margin-left: auto;
+  margin-right: auto;
+  width: calc((100% - 200px) / 2);
+  background-color: #dcdee7;
+  box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.373);
+  padding: 20px;
+}
+
+.application_exemples_li:hover {
+  background-color: #bcbdc481;
+}
+.application_exemples_span {
+  font-size: 23px;
+  text-decoration: underline 3px;
+}
+
+.application_exemples_li a {
+  color: #002aff;
+}
+
+.application_exemples_li:hover a {
+  font-size: 21px;
+}
+/* ///////////////////////////////////////////////////// */
+/* Icon pointer */
+.application_exemples_icon_wrapper {
+  width: 20px;
+  height: 20px;
+}
+.application_exemples_wrapper_link_icon {
+  width: fit-content;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+/* /////////////////////////////////////////////////// */
