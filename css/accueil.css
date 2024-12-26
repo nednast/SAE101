@@ -16,6 +16,15 @@
   padding: 20px;
   background-color: #dcdee7c7;
 }
+
+@media screen and (max-width: 445px) {
+  .intro {
+    margin-top: -40px;
+    font-size: 8px;
+    padding: 10px;
+  }
+}
+
 /* ///////////////////////////////////////////////////////////////////////// */
 /* Сommun pour les sections */
 .section {
