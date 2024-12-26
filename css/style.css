@@ -17,6 +17,12 @@ body {
   background-color: #dee0e9;
   margin-bottom: 100px;
 }
+@media screen and (min-width: 445px) {
+  body {
+    margin-bottom: 50px;
+  }
+}
+
 /* ///////////////////////////////////////////////////////////// */
 
 /* Section Menu  */
