@@ -187,8 +187,9 @@ html {
     background-size: contain;
   }
   .title_text {
-    font-size: 46px;
+    font-size: 40px;
     padding-top: 20px;
+    letter-spacing: normal;
     /* padding-bottom: 60px; */
   }
 }
