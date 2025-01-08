@@ -20,16 +20,38 @@ h3 {
   );
 }
 
-li {
-  list-style: initial;
-  line-height: 30px;
+section li {
+  list-style: disc;
   margin-left: 20px;
 }
 
+@media screen and (max-width: 445px) {
+  body {
+    background-size: contain;
+  }
+  .active {
+    font-size: 10px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  li {
+    line-height: 15px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
 .section-c {
   margin-left: 9%;
   margin-top: 30px;
   text-align: justify;
+}
+.section-c > ul {
+  margin-top: 10px;
 }
 
 .explication {
@@ -42,6 +64,10 @@ li {
   overflow-y: scroll;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.explication > ul {
+  margin-top: 10px;
 }
 
 .explication::-webkit-scrollbar {
@@ -66,4 +92,51 @@ li {
 .section-web {
   margin-left: 9%;
   margin-top: 60px;
+}
+
+.section-web > ul {
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 445px) {
+  .section-c {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -30px;
+    width: 300px;
+  }
+
+  .section-c > ul {
+    margin-top: 5px;
+  }
+
+  .explication {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    padding: 15px;
+  }
+
+  .explication > ul {
+    margin-top: 5px;
+  }
+
+  .wrapper {
+    font-size: 15px;
+  }
+
+  .explication::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .section-web {
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+  }
+
+  .section-web > ul {
+    margin-top: 5px;
+  }
 }

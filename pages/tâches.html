@@ -1,247 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/tâches.css" />
     <title>Taches</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <a class="scroll-to-top" href="#top">
+      <img src="../img/scroll.png" width="25" height="25" alt="⇧" />
+    </a>
 
-    <body>
-        <a class="scroll-to-top" href="#top">
-            <img src="../img/scroll.png" width="25" height="25" alt="⇧" />
-        </a>
+    <header>
+      <ul class="menu">
+        <li class="menu_li">
+          <a class="menu_li_lien" href="../index.html">Accueil</a>
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="../pages/auteurs.html">Auteurs</a>
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien active" href="../pages/tâches.html"
+            >Répartion des tâches</a
+          >
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="../pages/chronologie.html"
+            >Chronologie</a
+          >
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="../pages/problemes.html"
+            >Problèmes rencontrés</a
+          >
+        </li>
+      </ul>
+    </header>
 
-        <header>
-            <ul class="menu">
-                <li class="menu_li">
-                    <a class="menu_li_lien " href="../index.html">Accueil</a>
-                </li>
-                <li class="menu_li">
-                    <a class="menu_li_lien" href="../pages/auteurs.html">Auteurs</a>
-                </li>
-                <li class="menu_li">
-                    <a class="menu_li_lien active" href="../pages/tâches.html">Répartion des tâches</a>
-                </li>
-                <li class="menu_li">
-                    <a class="menu_li_lien" href="../pages/chronologie.html">Chronologie</a>
-                </li>
-                <li class="menu_li">
-                    <a class="menu_li_lien" href="../pages/problemes.html">Problèmes rencontrés</a>
-                </li>
-            </ul>
-        </header>
+    <section id="top" class="title">
+      <h1 class="title_text">Le jeu de la vie</h1>
+    </section>
 
-        <section id="top" class="title">
-            <h1 class="title_text">Le jeu de la vie</h1>
-        </section>
+    <section class="section-c">
+      <h3>Répartition des tâches Code c</h3>
+      <ul class="section_c_list">
+        <li>
+          <p>
+            Pour les ensembles <i>game.c</i> et <i>game.h</i> ce sont
+            <i>Mouad</i>, <i>Johan</i> et <i>Salaheddine</i> qui ont travaillés
+            dessus.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour les ensembles <i>game_mode.c</i> et <i>game_mode.h</i> ce sont
+            <i>Anastasiia</i>, <i>Mouad</i> et <i>Tiphaine</i> qui ont travaillé
+            dessus.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour les ensembles <i>menu.c</i> et <i>menu.h</i> ce sont
+            <i>Tiphaine</i>,<i>Hanna</i> et <i>Anastasiia</i> qui ont travaillé
+            dessus.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour les ensembles <i> window.c</i> et <i>window.h</i> ce sont
+            <i>Johan</i>, <i>Salaheddine</i> et <i>Hanna</i> qui ont travaillé
+            dessus.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <i>la correction des bugs</i>, c’est toute l’équipe qui a
+            travaillé dessus pour réunir toutes nos connaissances.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <i>la mise en forme</i> du code, toute l’équipe à participer
+            sur différentes semaines (voir page chronologie)
+          </p>
+        </li>
+      </ul>
+    </section>
+    <section class="explication">
+      <h3>Explications sur les choix techniques</h3>
+      <ul>
+        <li>
+          <p>
+            <span class="wrapper">Pour le code game.c </span>: La fonction
+            principale, game, gère la boucle du jeu, mettant à jour l'état de la
+            grille et affichant deux fenêtres : game_win pour la grille et
+            info_win pour les informations. La mise à jour des cellules suit les
+            règles du jeu, implémentées dans game_update, avec le calcul des
+            voisins vivants via count_live_neighbors. L'affichage utilise
+            print_game pour la grille et print_info pour les détails, avec des
+            couleurs pour améliorer la lisibilité. Les commandes clavier
+            permettent de basculer entre les modes automatique et manuel,
+            ajuster la vitesse ou effectuer des étapes manuelles. La fonction
+            usleep régule la vitesse des mises à jour en mode automatique,
+            assurant une simulation fluide et intuitive.
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class="wrapper">Pour le code game_mode.c</span> : La fonction
+            random_game initialise la grille avec des cellules vivantes à une
+            probabilité de 1 sur 4, ce qui permet de créer un état de départ
+            aléatoire pour le jeu. Cela ajoute de la variété et de
+            l'imprévisibilité à chaque exécution. La fonction file_game charge
+            un motif depuis un fichier, ou en crée un nouveau avec un motif par
+            défaut si le fichier n'existe pas. Ce motif par défaut est une
+            petite structure définie dans la matrice default_pattern, qui sert
+            de configuration initiale si le fichier de motifs est introuvable.
+            Enfin, la fonction glider_gun initialise un motif classique appelé
+            "Glider Gun", qui est une configuration de cellules vivantes
+            produisant un mouvement cyclique et intéressant dans le jeu. Cette
+            fonction utilise un tableau de coordonnées pour définir les cellules
+            vivantes dans la grille, permettant d’introduire des motifs
+            complexes et connus dans le jeu. Ces choix techniques permettent de
+            diversifier les configurations de départ de la grille, offrant ainsi
+            différentes possibilités de jeu et de simulation.
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class="wrapper">Pour le code menu.c </span>: La fonction
+            print_banniere affiche une bannière avec des caractères clignotants
+            et colorés, améliorant l'esthétique et l'interactivité du programme.
+            Elle utilise les fonctions de ncurses pour appliquer des couleurs et
+            des effets tels que le clignotement. Ensuite, la fonction print_menu
+            présente un menu simple avec trois options de configuration de la
+            grille : initialisation aléatoire (random_game), chargement d'un
+            motif depuis un fichier (file_game), et utilisation du motif
+            classique "Canon de planneurs" (glider_gun). La fonction choix_user
+            prend l'entrée de l'utilisateur et appelle la fonction appropriée en
+            fonction du choix (1, 2, ou 3), modifiant la grille en conséquence.
+            La boucle dans menu rafraîchit continuellement l'écran, affiche la
+            bannière et le menu, puis attend l'entrée de l'utilisateur. Après un
+            choix, la grille est mise à jour, et le menu continue à s'afficher
+            jusqu'à ce qu'un choix valide soit fait. L’utilisation de clear,
+            refresh, et usleep permet de rendre l’interface fluide et réactive,
+            tout en offrant une expérience utilisateur interactive avec des
+            options de configuration variées.
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class="wrapper">Pour le code window.c </span> : La fonction
+            init_ncurses initialise la bibliothèque ncurses pour créer une
+            interface terminal interactive. Elle configure des options comme
+            cbreak() pour désactiver la mise en tampon, noecho() pour ne pas
+            afficher les entrées de l'utilisateur, et nodelay() pour rendre les
+            appels à getch() non-bloquants. Elle active les touches spéciales
+            avec keypad() et masque le curseur via curs_set (FALSE). Enfin,
+            start_color() et init_pair() activent et définissent des paires de
+            couleurs, permettant une interface colorée et esthétique. Ces
+            réglages assurent une interaction fluide et un contrôle visuel
+            précis.
+          </p>
+        </li>
+      </ul>
+    </section>
 
-        <section class="section-c">
-            <h3> Répartition des tâches Code c</h3>
-            <ul class="section_c_list">
-                <li>
-                    <p>Pour les ensembles <i>game.c</i> et <i>game.h</i> ce sont <i>Mouad</i>, <i>Johan</i> et
-                        <i>Salaheddine</i> qui
-                        ont
-                        travaillés
-                        dessus.
-                    </p>
-                </li>
-                <li>
-                    <p>Pour les ensembles <i>game_mode.c</i> et <i>game_mode.h</i> ce sont <i>Anastasiia</i>,
-                        <i>Mouad</i> et <i>Tiphaine</i> qui ont
-                        travaillé
-                        dessus.
-                    </p>
-                </li>
-                <li>
-                    <p>Pour les ensembles <i>menu.c</i> et <i>menu.h</i> ce sont <i>Tiphaine</i>,<i>Hanna</i> et
-                        <i>Anastasiia</i> qui ont travaillé
-                        dessus.
-                    </p>
-                </li>
-                <li>
-                    <p>Pour les ensembles <i> window.c</i> et <i>window.h</i> ce sont <i>Johan</i>, <i>Salaheddine</i>
-                        et <i>Hanna</i> qui ont travaillé
-                        dessus.
-                    </p>
-                </li>
-                <li>
-                    <p>Pour <i>la correction des bugs</i>, c’est toute l’équipe qui a travaillé dessus pour réunir
-                        toutes nos
-                        connaissances.</p>
-                </li>
-                <li>Pour <i>la mise en forme</i> du code, toute l’équipe à participer sur différentes semaines (voir
-                    page
-                    chronologie)</li>
-            </ul>
+    <section class="section-web">
+      <h3>Répartition des tâches Web</h3>
+      <ul>
+        <li>
+          <p>
+            Pour <i>la page d’accueil</i>, ce sont <i>Anastasiia</i> et
+            <i>Mouad</i> qui ont travaillé dessus.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <i>la page sur les auteurs</i>, ce sont <i>Hanna</i> et
+            <i>Tiphaine</i> qui ont travaillé dessus.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <i>la page sur la répartitions des tâches</i>, ce sont
+            <i>Johan</i> et <i>Salaheddine</i> qui ont travaillé dessus
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <i>la page sur la chronologie</i>, ce sont <i>Johan</i> et
+            <i>Hanna</i> qui ont travaillé dessus.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <i>les problèmes rencontrés</i> toute l’équipe à travailler
+            dessus pour réunir le plus de connaissances.
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <i>la réactivité</i>, toute l’équipe à participer sur
+            différentes semaines (voir page chronologie).
+          </p>
+        </li>
+        <li>
+          <p>
+            Pour <i>la partie tests</i>, toute l’équipe a également participé
+            pour un tester tous les éléments du site.
+          </p>
+        </li>
+      </ul>
+    </section>
 
+    <section class="explication">
+      <h3>Explications sur les choix techniques</h3>
+      <ul>
+        <li>
+          <p>
+            <span class="wrapper">Pour le menu</span>: Sur toutes les pages, un
+            menu de navigation est présent, permettant de relier entre elles
+            toutes les pages existantes et d'accéder facilement à n'importe
+            laquelle, quelle que soit la page sur laquelle on se trouve. Ce menu
+            reste fixe lors du défilement de la page grâce à la propriété CSS
+            <i>position: fixed;</i>, ce qui améliore l'expérience utilisateur en
+            rendant la navigation sur le site plus pratique et intuitive.
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class="wrapper">Pour les pages</span> : On a créé plusiers
+            pages reliés à son sujet, ce qui permet de mieux organiser et
+            structurer le code.
+          </p>
+        </li>
+        <li>
+          <p>
+            <span class="wrapper">Pour les feuilles de style</span> : Comme pour
+            les pages web, nous avons créé un fichier de style spécifique pour
+            chaque page, tout en centralisant les styles globaux dans le fichier
+            principal, nommé <i>styles.css</i>. Ce fichier contient l'annulation
+            des styles par défaut et les styles communs, comme la police
+            principale, les éléments du menu ou encore le bouton permettant de
+            remonter en haut de la page. Pour éviter les répétitions, nous avons
+            conçu plusieurs classes réutilisables en regroupant les règles
+            communes, ce qui simplifie la gestion et la mise à jour des styles
+            sur l’ensemble du projet. Cette organisation modulaire améliore la
+            lisibilité et facilite l'accès aux styles spécifiques lorsque
+            nécessaire.
+          </p>
+        </li>
 
-
-
-
-
-
-
-
-
-
-
-
-
-        </section>
-        <section class="explication">
-            <h3>Explications sur les choix techniques</h3>
-            <ul>
-                <li>
-                    <p><span class="wrapper">Pour le code game.c </span>: La fonction principale, game, gère la boucle
-                        du jeu, mettant à jour l'état
-                        de la grille et affichant deux fenêtres : game_win pour la grille et info_win pour les
-                        informations. La mise à jour des cellules suit les règles du jeu, implémentées dans game_update,
-                        avec le calcul des voisins vivants via count_live_neighbors. L'affichage utilise print_game pour
-                        la grille et print_info pour les détails, avec des couleurs pour améliorer la lisibilité. Les
-                        commandes clavier permettent de basculer entre les modes automatique et manuel, ajuster la
-                        vitesse ou effectuer des étapes manuelles. La fonction usleep régule la vitesse des mises à jour
-                        en mode automatique, assurant une simulation fluide et intuitive.
-                    </p>
-                </li>
-                <li>
-                    <p><span class="wrapper">Pour le code game_mode.c</span> : La fonction random_game initialise la
-                        grille avec des cellules
-                        vivantes à une probabilité de 1 sur 4, ce qui permet de créer un état de départ aléatoire pour
-                        le jeu. Cela ajoute de la variété et de l'imprévisibilité à chaque exécution. La fonction
-                        file_game charge un motif depuis un fichier, ou en crée un nouveau avec un motif par défaut si
-                        le fichier n'existe pas. Ce motif par défaut est une petite structure définie dans la matrice
-                        default_pattern, qui sert de configuration initiale si le fichier de motifs est introuvable.
-                        Enfin, la fonction glider_gun initialise un motif classique appelé "Glider Gun", qui est une
-                        configuration de cellules vivantes produisant un mouvement cyclique et intéressant dans le jeu.
-                        Cette fonction utilise un tableau de coordonnées pour définir les cellules vivantes dans la
-                        grille, permettant d’introduire des motifs complexes et connus dans le jeu. Ces choix techniques
-                        permettent de diversifier les configurations de départ de la grille, offrant ainsi différentes
-                        possibilités de jeu et de simulation.
-                    </p>
-                </li>
-                <li>
-                    <p><span class="wrapper">Pour le code menu.c </span>: La fonction print_banniere affiche une
-                        bannière avec des caractères
-                        clignotants et colorés, améliorant l'esthétique et l'interactivité du programme. Elle utilise
-                        les fonctions de ncurses pour appliquer des couleurs et des effets tels que le clignotement.
-                        Ensuite, la fonction print_menu présente un menu simple avec trois options de configuration de
-                        la grille : initialisation aléatoire (random_game), chargement d'un motif depuis un fichier
-                        (file_game), et utilisation du motif classique "Canon de planneurs" (glider_gun). La fonction
-                        choix_user prend l'entrée de l'utilisateur et appelle la fonction appropriée en fonction du
-                        choix (1, 2, ou 3), modifiant la grille en conséquence. La boucle dans menu rafraîchit
-                        continuellement l'écran, affiche la bannière et le menu, puis attend l'entrée de l'utilisateur.
-                        Après un choix, la grille est mise à jour, et le menu continue à s'afficher jusqu'à ce qu'un
-                        choix valide soit fait. L’utilisation de clear, refresh, et usleep permet de rendre l’interface
-                        fluide et réactive, tout en offrant une expérience utilisateur interactive avec des options de
-                        configuration variées.
-                    </p>
-                </li>
-                <li>
-                    <p><span class="wrapper">Pour le code window.c </span> : La fonction init_ncurses initialise la
-                        bibliothèque ncurses pour créer
-                        une interface terminal interactive. Elle configure des options comme cbreak() pour désactiver la
-                        mise en tampon, noecho() pour ne pas afficher les entrées de l'utilisateur, et nodelay() pour
-                        rendre les appels à getch() non-bloquants. Elle active les touches spéciales avec keypad() et
-                        masque le curseur via curs_set (FALSE). Enfin, start_color() et init_pair() activent et
-                        définissent des paires de couleurs, permettant une interface colorée et esthétique. Ces réglages
-                        assurent une interaction fluide et un contrôle visuel précis.
-                    </p>
-                </li>
-            </ul>
-
-        </section>
-
-
-
-        <section class="section-web">
-            <h3>Répartition des tâches Web</h3>
-            <ul>
-                <li>
-                    <p>Pour <i>la page d’accueil</i>, ce sont <i>Anastasiia</i> et <i>Mouad</i> qui ont travaillé
-                        dessus.
-                    </p>
-                </li>
-                <li>
-                    <p>Pour <i>la page sur les auteurs</i>, ce sont <i>Hanna</i> et <i>Tiphaine</i> qui ont travaillé
-                        dessus.
-                    </p>
-                </li>
-                <li>
-                    <p>Pour <i>la page sur la répartitions des tâches</i>, ce sont <i>Johan</i> et <i>Salaheddine</i>
-                        qui ont
-                        travaillé
-                        dessus</p>
-                </li>
-                <li>
-                    <p>Pour <i>la page sur la chronologie</i>, ce sont <i>Johan</i> et <i>Hanna</i> qui ont travaillé
-                        dessus.</p>
-                </li>
-                <li>
-                    <p>Pour <i>les problèmes rencontrés</i> toute l’équipe à travailler dessus pour réunir le plus de
-                        connaissances.</p>
-                </li>
-                <li>
-                    <p>Pour <i>la réactivité</i>, toute l’équipe à participer sur différentes semaines (voir page
-                        chronologie).
-                    </p>
-                </li>
-                <li>
-                    <p>Pour <i>la partie tests</i>, toute l’équipe a également participé pour un tester tous les
-                        éléments du
-                        site.
-                    </p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="explication">
-            <h3>Explications sur les choix techniques</h3>
-            <ul>
-                <li>
-                    <p><span class="wrapper">Pour le menu</span>: Sur toutes les pages, un menu de navigation est
-                        présent, permettant de relier entre elles toutes les pages existantes et d'accéder facilement à
-                        n'importe laquelle, quelle que soit la page sur laquelle on se trouve. Ce menu reste fixe lors
-                        du défilement de la page grâce à la propriété CSS <i>position: fixed;</i>, ce qui améliore
-                        l'expérience utilisateur en rendant la navigation sur le site plus pratique et intuitive.
-                    </p>
-                </li>
-                <li>
-                    <p><span class="wrapper">Pour les pages</span> : On a créé plusiers pages reliés à son sujet, ce qui
-                        permet de mieux organiser et structurer le code.
-                    </p>
-                </li>
-                <li>
-                    <p><span class="wrapper">Pour les feuilles de style</span> : Comme pour les pages web, nous avons
-                        créé un fichier de style spécifique pour chaque page, tout en centralisant les styles globaux
-                        dans le fichier principal, nommé <i>styles.css</i>. Ce fichier contient l'annulation des styles
-                        par défaut et les styles communs, comme la police principale, les éléments du menu ou encore le
-                        bouton permettant de remonter en haut de la page. Pour éviter les répétitions, nous avons conçu
-                        plusieurs classes réutilisables en regroupant les règles communes, ce qui simplifie la gestion
-                        et la mise à jour des styles sur l’ensemble du projet. Cette organisation modulaire améliore la
-                        lisibilité et facilite l'accès aux styles spécifiques lorsque nécessaire.
-                </li>
-                <li>
-                    <p><span class="wrapper"> Pour rendre notre site réactif</span> : Nous avons utilisé
-                        des techniques de conception adaptative afin qu’il s’affiche correctement sur différents
-                        appareils et tailles d’écran. Nous avons intégré une grille CSS flexible et des unités
-                        relatives, comme les pourcentages, pour assurer un affichage fluide.
-                        Les propriétés media queries ont été largement utilisées dans notres fichiers de styles pour
-                        adapter la disposition et les styles en fonction de la taille de l'écran. Enfin, nous avons
-                        veillé à tester le site
-                        sur divers appareils et navigateurs afin de garantir une expérience utilisateur cohérente et
-                        optimale.
-                    </p>
-                </li>
-            </ul>
-
-        </section>
-
-    </body>
-
+        <li>
+          <p>
+            <span class="wrapper"> Pour rendre notre site réactif</span> : Nous
+            avons utilisé des techniques de conception adaptative afin qu’il
+            s’affiche correctement sur différents appareils et tailles d’écran.
+            Nous avons intégré une grille CSS flexible et des unités relatives,
+            comme les pourcentages, pour assurer un affichage fluide. Les
+            propriétés media queries ont été largement utilisées dans notres
+            fichiers de styles pour adapter la disposition et les styles en
+            fonction de la taille de l'écran. Enfin, nous avons veillé à tester
+            le site sur divers appareils et navigateurs afin de garantir une
+            expérience utilisateur cohérente et optimale.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </body>
 </html>
