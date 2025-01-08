@@ -1,46 +1,69 @@
+body {
+  background-image: url(../img/backgr-tâches.png);
+  background-size: cover;
+}
+
 h3 {
-    width: fit-content;
-    font-size: 25px;
-    padding-left: 10px;
-    text-transform: uppercase;
-    color: white;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg,
-            rgba(0, 0, 0, 0.835171568627451) 14%,
-            rgba(62, 62, 62, 1) 28%,
-            rgba(115, 115, 115, 1) 37%,
-            rgba(170, 166, 166, 1) 59%,
-            rgba(222, 224, 233, 1) 85%);
-
-
+  width: fit-content;
+  font-size: 25px;
+  padding-left: 10px;
+  text-transform: uppercase;
+  color: white;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.835171568627451) 14%,
+    rgba(62, 62, 62, 1) 28%,
+    rgba(115, 115, 115, 1) 37%,
+    rgba(170, 166, 166, 1) 59%,
+    rgba(222, 224, 233, 1) 85%
+  );
 }
 
 li {
-    list-style: circle;
-    line-height: 30px;
-    margin-left: 20px;
-
+  list-style: initial;
+  line-height: 30px;
+  margin-left: 20px;
 }
 
 .section-c {
-    margin-left: 9%;
-    margin-top: 30px;
-    text-align: justify;
+  margin-left: 9%;
+  margin-top: 30px;
+  text-align: justify;
 }
 
 .explication {
-    margin-top: 60px;
-    margin-left: 40%;
-    width: 50%;
-    text-align: justify;
+  margin-top: 60px;
+  margin-left: 40%;
+  width: 50%;
+  padding: 25px;
+  text-align: justify;
+  height: 400px;
+  overflow-y: scroll;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.explication::-webkit-scrollbar {
+  display: block;
+  width: 10px;
+}
+
+.explication::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+.explication::-webkit-scrollbar-track {
+  background-color: #9c9da12a;
 }
 
 .wrapper {
-    font-size: large;
-    text-decoration: underline 2px;
+  font-size: large;
+  text-decoration: underline 2px;
 }
 
 .section-web {
-    margin-left: 9%;
-    margin-top: 60px;
+  margin-left: 9%;
+  margin-top: 60px;
 }
