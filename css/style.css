@@ -17,6 +17,7 @@ body {
   background-color: #dee0e9;
   margin-bottom: 100px;
 }
+
 @media screen and (min-width: 445px) {
   body {
     margin-bottom: 50px;
@@ -75,12 +76,14 @@ header {
   box-shadow: rgba(255, 255, 255, 0.301) 0px 30px 60px -12px inset,
     rgba(255, 255, 255, 0) 0px 18px 36px -18px inset;
 }
+
 @media screen and (max-width: 445px) {
   .menu {
     padding-top: 5px;
     padding-bottom: 5px;
     gap: 15px;
   }
+
   .menu :nth-child(3) {
     width: 61px;
   }
@@ -88,6 +91,7 @@ header {
   .menu :nth-child(5) {
     width: 60px;
   }
+
   .menu_li_lien {
     align-items: center;
     font-size: 12px;
@@ -153,7 +157,8 @@ header {
     width: 35px;
     height: 35px;
   }
-  .scroll-to-top > img {
+
+  .scroll-to-top>img {
     width: 15px;
     height: 15px;
     border: 1px;
@@ -163,6 +168,7 @@ header {
 html {
   scroll-behavior: smooth;
 }
+
 /* ////////////////////////////////////////////////// */
 
 /* Section titre principale  */
@@ -192,6 +198,7 @@ html {
     background-image: url(../img/title_background.jpg);
     background-size: contain;
   }
+
   .title_text {
     font-size: 40px;
     padding-top: 20px;
@@ -199,4 +206,5 @@ html {
     /* padding-bottom: 60px; */
   }
 }
+
 /* ///////////////////////////////////////////////////////////////////////// */

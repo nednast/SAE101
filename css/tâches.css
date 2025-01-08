@@ -1,0 +1,46 @@
+h3 {
+    width: fit-content;
+    font-size: 25px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: white;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.835171568627451) 14%,
+            rgba(62, 62, 62, 1) 28%,
+            rgba(115, 115, 115, 1) 37%,
+            rgba(170, 166, 166, 1) 59%,
+            rgba(222, 224, 233, 1) 85%);
+
+
+}
+
+li {
+    list-style: circle;
+    line-height: 30px;
+    margin-left: 20px;
+
+}
+
+.section-c {
+    margin-left: 9%;
+    margin-top: 30px;
+    text-align: justify;
+}
+
+.explication {
+    margin-top: 60px;
+    margin-left: 40%;
+    width: 50%;
+    text-align: justify;
+}
+
+.wrapper {
+    font-size: large;
+    text-decoration: underline 2px;
+}
+
+.section-web {
+    margin-left: 9%;
+    margin-top: 60px;
+}
