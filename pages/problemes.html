@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/problemes.css" />
+    <title>Problèmes</title>
+  </head>
+  <body>
+    <a class="scroll-to-top" href="#top">
+      <img src="../img/scroll.png" width="25" height="25" alt="⇧" />
+    </a>
+
+    <header>
+      <ul class="menu">
+        <li class="menu_li">
+          <a class="menu_li_lien" href="../index.html">Accueil</a>
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="../pages/auteurs.html">Auteurs</a>
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="../pages/tâches.html"
+            >Répartion des tâches</a
+          >
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien" href="../pages/chronologie.html"
+            >Chronologie</a
+          >
+        </li>
+        <li class="menu_li">
+          <a class="menu_li_lien active" href="../pages/problemes.html"
+            >Problèmes rencontrés</a
+          >
+        </li>
+      </ul>
+    </header>
+
+    <section id="top" class="title">
+      <h1 class="title_text">Le jeu de la vie</h1>
+    </section>
+    <blockquote class="intro">
+      "Chaque projet est une histoire, chaque jeu, c'est bien plus que juste du
+      code! <br />
+      Derrière chaque projet réussi se cachent des moments de doute, des
+      obstacles et un travail acharné. Notre jeu est né d'un mélange d'idées, de
+      défis et de solutions qui ont forgé son caractère unique. Sur cette page,
+      nous partageons les coulisses de notre parcours : les obstacles auxquels
+      notre équipe a été confrontée, les leçons que nous avons tirées et
+      comment, pas à pas, nous nous sommes rapprochés de notre objectif.
+      Bienvenue dans un monde où les défis se transforment en opportunités!"
+    </blockquote>
+    <h2>Problèmes rencontré</h2>
+    <section class="container">
+      <h3>Problème 1 : Utilisation incorrecte des types de données</h3>
+      <ul>
+        <li>
+          <img src="../img/error.png" alt="error icon" />
+          <p>
+            <strong>Problème</strong> : En apprenant à utiliser ncurses, nous
+            avons rencontré des erreurs liées à l'utilisation de types de
+            données incorrects pour les caractères et les entiers. Par exemple,
+            dans la fonction “choix_user”, nous avons initialement passé un
+            entier pour gérer l'entrée de l'utilisateur, mais nous l'avons
+            comparé avec des caractères ('1', '2', '3'), ce qui a provoqué des
+            bugs.
+          </p>
+        </li>
+        <li>
+          <strong>Solution</strong> : La solution a été d'utiliser un type
+          `char` pour le choix afin que la comparaison fonctionne correctement.
+          Nous avons également utilisé des entiers au lieu de caractères dans
+          des fonctions comme “getch()” et “mvwaddch()”, ce qui a conduit à des
+          résultats inattendus. En corrigeant ces erreurs de type, nous avons
+          appris à utiliser les types appropriés pour éviter les problèmes
+          futurs.
+        </li>
+      </ul>
+
+      <h3>Problème 2 : Initialisation de ncurses</h3>
+      <ul>
+        <li>
+          <img src="../img/documentation.png" alt="documentation icon" />
+          <p>
+            <strong>Problème</strong> : L'utilisation de la bibliothèque ncurses
+            a représenté un véritable défi, d'autant plus que nous étions
+            habitués à la bibliothèque C standard. Avec ncurses, nous étions
+            constamment confrontés à la difficulté d'oublier d'initialiser
+            correctement la bibliothèque avec initscr() ou d'oublier de la
+            fermer avec “endwin()”. Ces étapes simples mais cruciales étaient
+            faciles à négliger, et sans elles, le programme se comportait
+            souvent de manière inattendue ou se plantait.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Solution</strong> : Il a fallu plusieurs essais pour prendre
+            l'habitude de toujours initialiser ncurses au début et d'assurer un
+            nettoyage correct à la fin du programme. Avec le temps, cependant,
+            cette répétition nous a aidés à intérioriser ces étapes, et
+            l'utilisation de ncurses est devenue une seconde nature.
+          </p>
+        </li>
+      </ul>
+      <h3>Problème 3 : Organisation du code</h3>
+      <ul>
+        <li>
+          <img src="../img/fichiers.png" alt="fichiers icon" />
+          <p>
+            <strong>Problème</strong> : La division du code en fichiers logiques
+            distincts a été un défi auquel nous avons été confrontés au début,
+            surtout lorsque nous avions l'habitude de tout mettre dans un seul
+            fichier. Les enseignants ont souligné l'importance de l'organisation
+            du code pour une meilleure maintenabilité, et nous avons donc dû
+            remanier notre approche.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Solution</strong> : Nous avons commencé par identifier des
+            modules distincts basés sur la fonctionnalité : un pour la logique
+            du jeu, un pour l'interface utilisateur et un pour les fonctions
+            utilitaires. Nous avons ensuite créé des fichiers d'en-tête (*.h)
+            pour chaque module, contenant les déclarations de fonctions et les
+            définitions de types nécessaires. Ces fichiers d'en-tête nous ont
+            permis de définir des interfaces claires, facilitant ainsi le
+            travail indépendant sur les différentes parties du projet. Chaque
+            fichier source (*.c) contenait l'implémentation réelle des
+            fonctions, et nous avons veillé à inclure le fichier d'en-tête
+            correspondant au début de chaque fichier source.
+          </p>
+        </li>
+      </ul>
+
+      <h3>Problème 4 : Compréhension des fonctions ncurses</h3>
+      <ul>
+        <li>
+          <img src="../img/questions.png" alt="questions icon" />
+          <p>
+            <strong>Problème</strong> : Lors de l'utilisation de ncurses, nous
+            avons souvent rencontré des problèmes avec les différentes
+            fonctions, car notre compréhension de ces dernières était assez
+            faible, l'utilisation de la documentation de ncurses nous a pris
+            assez longtemps à comprendre et nous avons dû chercher beaucoup
+            d'informations et filtrer l’utile de l'inutile pour accomplir nos
+            tâches et ainsi résoudre ce problème, la meilleure solution était de
+            tester des fonctions similaires et de voir ce qui fonctionnait le
+            mieux avec le code existant.
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Solution</strong> : Par exemple, au lieu d'utiliser une
+            fonction printf de base, une fonction courante de la bibliothèque C
+            standard, “mvprintw()” nous aide à déplacer le curseur à une
+            position spécifiée sur l'écran et imprime une chaîne de caractères
+            formatée. Il s'agit essentiellement d'une combinaison de la fonction
+            “move()” et de la fonction “printw()”.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

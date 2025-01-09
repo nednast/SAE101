@@ -1,7 +1,6 @@
 body {
-  background-image: url(../img/backgr.png);
-  background-size: cover;
-  background-position: 40%;
+  background-image: url(../img/backgr-tâches.png);
+  background-size: contain;
 }
 
 /* Section team */
@@ -94,9 +93,9 @@ body {
 
 @media screen and (max-width: 445px) {
   body {
-    background-image: url(../img/backgr.png);
-    background-size: contain;
-    background-position: top;
+    body {
+      background-size: contain;
+    }
   }
 
   .team {
