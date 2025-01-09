@@ -186,7 +186,10 @@
 
   .application_exemples_text {
     font-size: 10px;
+    display: flex;
+    flex-direction: column;
   }
+
   .application_exemples_span {
     font-size: 12px;
     text-decoration: underline 2px;
