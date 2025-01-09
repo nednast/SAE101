@@ -1,8 +1,11 @@
+/* Configuration de l'image de fond et des propriétés de la page */
 body {
   background-image: url(../img/backgr-tâches.png);
   background-size: cover;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Style des titres h3 */
 h3 {
   width: fit-content;
   font-size: 25px;
@@ -19,103 +22,131 @@ h3 {
     rgba(222, 224, 233, 1) 85%
   );
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Style des éléments de liste dans la section */
 section li {
   list-style: disc;
   margin-left: 20px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme pour les smartphones */
 @media screen and (max-width: 445px) {
+  /* L'image de fond est redimensionnée pour contenir */
   body {
     background-size: contain;
   }
+  /* ///////////////////////////////////////////////////////////////////////////////////// */
+
+  /* Réduction de la taille de la police pour l'élément actif */
   .active {
     font-size: 10px;
   }
+  /* ///////////////////////////////////////////////////////////////////////////////////// */
 
+  /* Réduction de la taille du titre */
   h3 {
     font-size: 15px;
   }
+  /* ///////////////////////////////////////////////////////////////////////////////////// */
 
+  /* Espacement des lignes des éléments de liste */
   li {
     line-height: 15px;
   }
+  /* ///////////////////////////////////////////////////////////////////////////////////// */
 
+  /* Taille du texte des paragraphes */
   p {
     font-size: 12px;
   }
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
+
+/* Section avec les tâches sur le code "C" (.section-c) */
 .section-c {
   margin-left: 9%;
   margin-top: 30px;
   text-align: justify;
 }
+
+/* Espacement entre les éléments de liste dans .section-c */
 .section-c > ul {
   margin-top: 10px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Style de la boîte avec les explications des choix téchnique (explication) */
 .explication {
   margin-top: 60px;
   margin-left: 40%;
   width: 50%;
   padding: 25px;
   text-align: justify;
-  height: 400px;
-  overflow-y: scroll;
+  height: 400px; /* Hauteur fixée pour la boîte */
+  overflow-y: scroll; /* Permet le défilement vertical */
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
+/* Espacement des éléments de liste à l'intérieur de .explication */
 .explication > ul {
   margin-top: 10px;
 }
 
+/* Personnalisation du style de la barre de défilement de .explication */
 .explication::-webkit-scrollbar {
-  display: block;
-  width: 10px;
+  display: block; /* Affichage de la barre de défilement */
+  width: 10px; /* Largeur de la barre */
 }
 
 .explication::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 5px;
+  background-color: #888; /* Couleur de la barre de défilement */
+  border-radius: 5px; /* Coins arrondis */
 }
 
 .explication::-webkit-scrollbar-track {
-  background-color: #9c9da12a;
+  background-color: #9c9da12a; /* Couleur de la piste de la barre de défilement */
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
-.wrapper {
-  font-size: large;
-  text-decoration: underline 2px;
-}
-
+/* Section avec les tâches pour les pages wev (.section-web) */
 .section-web {
   margin-left: 9%;
   margin-top: 60px;
 }
 
+/* Espacement des éléments de liste dans .section-web */
 .section-web > ul {
   margin-top: 10px;
 }
+/* Un wrapper qui sert à décorer les sous-titres*/
+.wrapper {
+  font-size: large;
+  text-decoration: underline 2px;
+}
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme pour les petits écrans pour .section-c, .explication, et .section-web */
 @media screen and (max-width: 445px) {
   .section-c {
-    margin-left: auto;
+    margin-left: auto; /* Centrage horizontal */
     margin-right: auto;
-    margin-top: -30px;
-    width: 300px;
+    margin-top: -30px; /* Ajustement du haut */
+    width: 300px; /* Largeur de la section pour petits écrans */
   }
 
   .section-c > ul {
-    margin-top: 5px;
+    margin-top: 5px; /* Espacement réduit pour les petits écrans */
   }
 
   .explication {
     margin-top: 30px;
-    margin-left: auto;
+    margin-left: auto; /* Centrage horizontal */
     margin-right: auto;
-    width: 300px;
-    padding: 15px;
+    width: 300px; /* Largeur de la boîte pour petits écrans */
+    padding: 15px; /* Espacement réduit */
   }
 
   .explication > ul {
@@ -123,20 +154,21 @@ section li {
   }
 
   .wrapper {
-    font-size: 15px;
+    font-size: 15px; /* Réduction de la taille du texte */
   }
 
   .explication::-webkit-scrollbar {
-    width: 5px;
+    width: 5px; /* Réduction de la largeur de la barre de défilement */
   }
 
   .section-web {
-    margin-left: auto;
+    margin-left: auto; /* Centrage horizontal */
     margin-right: auto;
-    width: 300px;
+    width: 300px; /* Largeur de la section pour petits écrans */
   }
 
   .section-web > ul {
     margin-top: 5px;
   }
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */

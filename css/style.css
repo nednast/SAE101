@@ -1,7 +1,8 @@
-/* Importes des polices */
+/* Importation des polices */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
+/* //////////////////////////////////////////////////////////////////////////// */
 
 /* Réinitialisation des styles par défaut */
 * {
@@ -12,15 +13,21 @@
   font-weight: 800;
   list-style: none;
 }
+/* //////////////////////////////////////////////////////////////////////////// */
 
+/* Comportement de défilement fluide de la page */
+html {
+  scroll-behavior: smooth;
+}
+/* //////////////////////////////////////////////////////////////////////////// */
+
+/* Definition de la couleur de fond du corps des pages */
 body {
   background-color: #dee0e9;
 }
+/* //////////////////////////////////////////////////////////////////////////// */
 
-/* ///////////////////////////////////////////////////////////// */
-
-/* Section Menu  */
-
+/* Section Menu : barre de navigation fixe en haut */
 header {
   display: flex;
   background-color: #000000;
@@ -32,6 +39,7 @@ header {
   width: 100%;
 }
 
+/* Liste du menu avec éléments espacés */
 .menu {
   margin-left: auto;
   margin-right: auto;
@@ -43,6 +51,7 @@ header {
   align-items: center;
 }
 
+/* Style des liens du menu */
 .menu_li_lien {
   font-size: 25px;
   font-family: "Nunito", sans-serif;
@@ -56,10 +65,12 @@ header {
   padding: 5px 0;
 }
 
+/* Effet au survol des liens du menu */
 .menu_li_lien:hover {
   color: #9e9e9e;
 }
 
+/* Classe active pour le lien courant */
 .active {
   pointer-events: none;
   color: #ffffff;
@@ -69,33 +80,9 @@ header {
   box-shadow: rgba(255, 255, 255, 0.301) 0px 30px 60px -12px inset,
     rgba(255, 255, 255, 0) 0px 18px 36px -18px inset;
 }
+/* //////////////////////////////////////////////////////////////////////////// */
 
-@media screen and (max-width: 445px) {
-  .menu {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    gap: 15px;
-  }
-
-  .menu :nth-child(3) {
-    width: 61px;
-  }
-
-  .menu :nth-child(5) {
-    width: 60px;
-  }
-
-  .menu_li_lien {
-    align-items: center;
-    font-size: 12px;
-  }
-
-  .active {
-    font-size: 11px;
-  }
-}
-
-/* Animation de menu */
+/* Animation pour les liens du menu : ligne sous le lien */
 .menu_li_lien::before {
   content: "";
   width: 100%;
@@ -122,10 +109,36 @@ header {
   transform-origin: 0 50%;
   border-radius: 20px;
 }
+/* //////////////////////////////////////////////////////////////////////////// */
 
-/* ///////////////////////////////////////////////////////// */
+/* Mise en forme du menu pour les smartphones */
+@media screen and (max-width: 445px) {
+  .menu {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 15px;
+  }
 
-/* Ancre en haut de la page */
+  .menu :nth-child(3) {
+    width: 61px;
+  }
+
+  .menu :nth-child(5) {
+    width: 60px;
+  }
+
+  .menu_li_lien {
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .active {
+    font-size: 11px;
+  }
+}
+/* //////////////////////////////////////////////////////////////////////////// */
+
+/* Ancre de retour en haut de la page */
 .scroll-to-top {
   position: fixed;
   bottom: 40px;
@@ -144,7 +157,9 @@ header {
 .scroll-to-top:hover {
   background-color: #9c9da181;
 }
+/* //////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme de l'ancre pour les smartphones */
 @media screen and (max-width: 445px) {
   .scroll-to-top {
     width: 35px;
@@ -158,13 +173,9 @@ header {
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* ////////////////////////////////////////////////// */
 
-/* Section titre principale  */
+/* Section titre principale : fond d'écran et mise en forme du texte */
 .title {
   background-image: url(../img/title_background.jpg);
   background-repeat: no-repeat;
@@ -183,7 +194,9 @@ html {
   font-weight: 400;
   letter-spacing: 10px;
 }
+/* //////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme du titre pour les petits écrans */
 @media screen and (max-width: 445px) {
   .title {
     margin-top: 70px;
@@ -201,7 +214,7 @@ html {
 
 /* ///////////////////////////////////////////////////////////////////////// */
 
-/* Section footer */
+/* Section Footer : pied de page */
 footer {
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
@@ -220,7 +233,9 @@ footer > p {
   font-family: "Kalam", serif;
   font-weight: 400;
 }
+/* //////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme du footer pour les petits écrans */
 @media screen and (max-width: 445px) {
   footer {
     margin-top: 50px;

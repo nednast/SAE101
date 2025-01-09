@@ -1,4 +1,4 @@
-/* Section Intro */
+/* Section Introduction : mise en forme du texte d'introduction */
 .intro {
   text-align: center;
   margin-top: 50px;
@@ -16,7 +16,9 @@
   padding: 20px;
   background-color: #dcdee7c7;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme pour les smartphones  */
 @media screen and (max-width: 445px) {
   .intro {
     margin-top: -40px;
@@ -25,22 +27,26 @@
     margin-bottom: 20px;
   }
 }
-
 /* ///////////////////////////////////////////////////////////////////////// */
-/* Сommun pour les sections */
+
+/* Mise en forme commune pour les sections */
 .section {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Liste de contenu dans les sections */
 .list {
   list-style: none;
   width: 40%;
   text-wrap: wrap;
   text-align: justify;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Titre des listes */
 .list_title {
   font-size: 30px;
   padding-left: 10px;
@@ -56,12 +62,14 @@
     rgba(222, 224, 233, 1) 85%
   );
 }
-
+/* Texte des listes */
 .list_text {
   font-size: 20px;
   padding-top: 10px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme pour les smartphones  */
 @media screen and (max-width: 445px) {
   .list {
     width: 50%;
@@ -76,6 +84,7 @@
     padding-top: 5px;
   }
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
 /* Section description */
 .description {
@@ -83,7 +92,7 @@
 }
 /* /////////////////////////////////////////////// */
 
-/* Styles pour les GIF */
+/* Styles pour les GIF: ajustement des tailles */
 .game-gif {
   height: 200px;
   width: 300px;
@@ -98,7 +107,9 @@
   width: 325px;
   border-radius: 10px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme pour les smartphones  */
 @media screen and (max-width: 445px) {
   .game-gif {
     height: 100px;
@@ -112,11 +123,13 @@
 
 /* /////////////////////////////////////////////////////// */
 
-/* Section rules */
+/* Section des règles (rules) */
 .rules {
   margin-top: 50px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme pour les smartphones  */
 @media screen and (max-width: 445px) {
   .rules {
     margin-top: 20px;
@@ -124,7 +137,7 @@
 }
 /* /////////////////////////////////////////////////////// */
 
-/* Section Application */
+/* Section Application : liste et exemples */
 .application {
   margin-top: 60px;
   flex-direction: column;
@@ -136,7 +149,9 @@
 .application_list_text {
   font-size: 22px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Liste des exemples d'applications */
 .application_exemples_list {
   list-style: none;
   margin-top: 50px;
@@ -144,6 +159,7 @@
   flex-wrap: wrap;
   row-gap: 50px;
 }
+/* Style pour chaque exemple dans la liste */
 .application_exemples_li {
   margin-left: auto;
   margin-right: auto;
@@ -161,6 +177,7 @@
   text-decoration: underline 3px;
 }
 
+/* Liens dans les exemples */
 .application_exemples_li a {
   color: #002aff;
 }
@@ -168,7 +185,9 @@
 .application_exemples_li:hover a {
   font-size: 21px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme pour les smartphones  */
 @media screen and (max-width: 445px) {
   .application_list_text {
     font-size: 10px;
@@ -201,7 +220,7 @@
 }
 
 /* ///////////////////////////////////////////////////// */
-/* Icon pointer */
+/* Icônes dans les exemples */
 .application_exemples_icon_wrapper {
   width: 20px;
   height: 20px;

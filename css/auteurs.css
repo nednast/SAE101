@@ -1,9 +1,11 @@
+/* Corps de la page : image de fond */
 body {
   background-image: url(../img/backgr-tâches.png);
   background-size: contain;
 }
+/* ////////////////////////////////////////////////////////// */
 
-/* Section team */
+/* Section équipe (team) */
 .team {
   margin-top: 50px;
   width: 60%;
@@ -15,24 +17,28 @@ body {
   align-items: center;
 }
 
+/* Titre de la section équipe */
 .team_title {
   text-align: center;
   font-size: 40px;
   margin-bottom: 50px;
 }
 
+/* Liste des membres de l'équipe */
 .team_list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 60px 60px;
+  gap: 60px 60px; /* Espacement entre les cartes */
 }
+
+/* Style pour chaque carte de membre */
 .team_list_card {
   background-color: #f4f4fd;
   border: #9e9e9e 2px solid;
   border-radius: 20px;
-  width: calc((100% - 180px) / 2);
+  width: calc((100% - 180px) / 2); /* Deux cartes par ligne */
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -42,18 +48,24 @@ body {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
+/* Effet au survol des cartes */
 .team_list_card:hover {
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
+/* Image dans la carte */
 .team_list_card > img {
   max-width: 100%;
+  width: 350px;
+  height: 350px;
 }
 
+/* Titre de chaque membre */
 .team_list_card h3 {
   margin-top: 20px;
 }
 
+/* Description de chaque membre */
 .team_list_card p {
   margin-top: 10px;
   color: #434455;
@@ -62,6 +74,7 @@ body {
   font-size: 15px;
 }
 
+/* Bouton ou wrapper pour les contacts */
 .contact_wrapper {
   margin-top: 20px;
   align-items: center;
@@ -76,39 +89,40 @@ body {
   font-size: 18px;
 }
 
+/* Effet au survol du wrapper contact */
 .contact_wrapper:hover {
   background-color: #91919181;
   font-size: 19px;
 }
 
+/* Lien dans le wrapper contact */
 .contact_wrapper > a {
   text-decoration: none;
   color: black;
 }
 
-.team_list_card > img {
-  width: 350px;
-  height: 350px;
-}
-
+/* Mise en forme pour les smartphones  */
 @media screen and (max-width: 445px) {
+  /* Ajustement de l'image de fond */
   body {
     background-size: contain;
   }
 
+  /* Section équipe réduite */
   .team {
     margin-top: -30px;
     width: 95%;
   }
-
+  /* Titre plus petit */
   .team_title {
     font-size: 20px;
     margin-bottom: 30px;
   }
-
+  /* Réduction des espaces et tailles */
   .team_list {
     gap: 30px 20px;
   }
+  /* Cartes ajustées */
   .team_list_card {
     width: calc((100% - 50px) / 2);
     padding: 10px;
@@ -124,7 +138,7 @@ body {
     font-size: 10px;
     line-height: 13px;
   }
-
+  /* Wrapper contact réduit */
   .contact_wrapper {
     margin-top: 10px;
     padding: 3px;
@@ -146,3 +160,5 @@ body {
     height: 150px;
   }
 }
+
+/* ////////////////////////////////////////////////////////////////////// */

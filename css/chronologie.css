@@ -1,15 +1,20 @@
+/* Corps de la page avec une image de fond */
 body {
   background-image: url(../img/backgr-tâches.png);
   background-size: contain;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Style du titre h2 */
 h2 {
   margin-top: 50px;
   margin-bottom: 30px;
   text-align: center;
   font-size: 50px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Section chronologie */
 .chronologie {
   margin-bottom: 50px;
   margin-left: auto;
@@ -19,6 +24,8 @@ h2 {
   justify-content: center;
   align-items: center;
 }
+
+/* Images dans la chronologie */
 .chronologie > img {
   width: 850px;
   border: 7px solid black;
@@ -26,7 +33,9 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Style des sections de contenu */
 .section {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
     rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
@@ -38,62 +47,71 @@ h2 {
   margin-top: 50px;
   width: 800px;
 }
+
+/* Liste dans les sections */
 .section ul {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
+/* Style des éléments de liste */
 .section li {
   list-style: disc;
   margin-left: 50px;
 }
+
+/* Style du titre h3 */
 h3 {
   font-size: 30px;
   text-decoration: underline;
 }
 
+/* Paragraphe dans les sections */
 .section p {
   font-size: 20px;
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 
+/* Mise en forme pour les smartphones */
 @media screen and (max-width: 445px) {
   body {
-    background-size: contain;
+    background-size: contain; /* Redimensionnement de l'image de fond */
   }
   .chronologie {
-    margin-bottom: 40px;
+    margin-bottom: 40px; /* Ajustement de l'espacement pour la chronologie */
   }
 
   .chronologie > img {
-    width: 330px;
-    border: 4px solid black;
+    width: 330px; /* Réduction de la largeur de l'image */
+    border: 4px solid black; /* Réduction de la bordure */
   }
   h2 {
-    margin-top: -30px;
-    margin-bottom: 10px;
-    font-size: 30px;
+    margin-top: -30px; /* Réduction de l'espacement en haut du titre */
+    margin-bottom: 10px; /* Réduction de l'espacement en bas */
+    font-size: 30px; /* Réduction de la taille de la police */
   }
 
   .section {
-    padding: 30px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    width: 300px;
+    padding: 30px; /* Espacement interne ajusté */
+    margin-bottom: 20px; /* Réduction de l'espacement du bas */
+    margin-top: 20px; /* Réduction de l'espacement du haut */
+    width: 300px; /* Réduction de la largeur */
   }
   .section ul {
-    margin-top: 3px;
+    margin-top: 3px; /* Réduction de l'espacement entre les éléments de liste */
     margin-bottom: 3px;
   }
 
   .section li {
-    margin-left: 30px;
-    font-size: 10px;
+    margin-left: 30px; /* Réduction du décalage de la puce */
+    font-size: 10px; /* Réduction de la taille de la police */
   }
   h3 {
-    font-size: 12px;
+    font-size: 12px; /* Réduction de la taille du titre */
   }
 
   .section p {
-    font-size: 10px;
+    font-size: 10px; /* Réduction de la taille des paragraphes */
   }
 }
+/* ///////////////////////////////////////////////////////////////////////////////////// */
