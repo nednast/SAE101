@@ -1,3 +1,10 @@
 {
-  "webvalidator.showInfo": true
+  "webvalidator.showInfo": true,
+  "editor.formatOnSave": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features"
+  }
 }
